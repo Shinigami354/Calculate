@@ -18,10 +18,10 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore Calculator.slnx
 
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build Calculator.slnx --no-restore
 
       - name: Test
-        run: dotnet test --no-build --collect:"XPlat Code Coverage"
+        run: dotnet test Calculator.slnx --no-build --collect:"XPlat Code Coverage"
